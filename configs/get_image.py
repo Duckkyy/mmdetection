@@ -5,6 +5,8 @@ import sys
 
 current_folder = os.path.dirname(os.path.abspath(__file__))
 
+print(current_folder)
+
 data_name = "Pallet_data"
 data_folder = "train"
 
@@ -12,7 +14,11 @@ pallet_folder = sys.argv[1] # ../dataset/Pallet_data
 dest_folder = sys.argv[2] # /train/0089
 dest_folder = os.path.join(current_folder, dest_folder)
 
+print(dest_folder)
+
 folder_key = os.path.basename(dest_folder) # "0089"
+
+print(folder_key)
 
 annotation_file_path = os.path.join(pallet_folder, f"via_region_data_{data_folder}.json")
 
