@@ -28,14 +28,17 @@ for key in annotation_data.keys():
     image_num = key.split("_")[1]
     image_folder = os.path.join(pallet_folder, folder_num)
 
-    if not os.path.isdir(image_folder):
-        continue
-    copied_image = os.path.join(image_folder, f"{image_num}-color.png")
-    if not os.path.isfile(copied_image):
-        continue
-    
     dest_file_path = os.path.join(dest_folder, f"{image_num}-color.png")
     if os.path.isfile(dest_file_path):
+        continue
+
+    if not os.path.isdir(image_folder):
+        continue
+    
+    copied_image = os.path.join(image_folder, f"{image_num}-color.png")
+    if not os.path.isfile(copied_image):
+        backup_image = os.path.join(dest_folder, "000008-color.png")
+        shutil.copy(backup_image, dest_folder)
         continue
     
     shutil.copy(copied_image, dest_folder)
