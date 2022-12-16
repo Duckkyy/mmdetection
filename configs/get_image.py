@@ -11,8 +11,8 @@ data_name = "Pallet_data"
 data_folder = "train"
 
 pallet_folder = sys.argv[1] # ../dataset/Pallet_data
-dest_folder = sys.argv[2] # /train/0089
-dest_folder = os.path.join(current_folder, dest_folder)
+dest_folder_name = sys.argv[2] # /train/0089
+dest_folder = os.path.join(current_folder, dest_folder_name)
 
 print(dest_folder)
 
