@@ -49,3 +49,9 @@ def convert_balloon_to_coco(ann_file, out_file, image_prefix):
         annotations=annotations,
         categories=[{'id':0, 'name': 'balloon'}])
     mmcv.dump(coco_format_json, out_file)
+
+if __name__ == "__main__":
+    anno_file = "val/via_region_data_val.json"
+    output_file = "val/annotation_coco.json"
+    prefix = "val"
+    convert_balloon_to_coco(anno_file, output_file, prefix)
