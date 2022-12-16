@@ -40,7 +40,7 @@ for key in annotation_data.keys():
     dest_file_path = os.path.join(dest_folder, f"{image_num}-color.png")
     if os.path.isfile(dest_file_path):
         continue
-    os.makedirs(dest_folder, exist_ok=True)
+    # os.makedirs(dest_folder, exist_ok=True)
     shutil.copy(copied_image, dest_folder)
 
     # copied_image_num += 1
