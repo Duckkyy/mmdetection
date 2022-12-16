@@ -52,7 +52,7 @@ def convert_balloon_to_coco(ann_file, out_file, image_prefix):
 
 if __name__ == "__main__":
     modified_folder = "train"
-    anno_file = "{}/via_region_data_{}.json".format(modified_folder)
+    anno_file = "{}/via_region_data_{}.json".format(modified_folder, modified_folder)
     output_file = "{}/annotation_coco.json".format(modified_folder)
     prefix = modified_folder
     convert_balloon_to_coco(anno_file, output_file, prefix)
