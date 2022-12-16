@@ -34,11 +34,11 @@ for key in annotation_data.keys():
 
     if not os.path.isdir(image_folder):
         continue
-    
+
     copied_image = os.path.join(image_folder, f"{image_num}-color.png")
     if not os.path.isfile(copied_image):
         backup_image = os.path.join(dest_folder, "000008-color.png")
-        shutil.copy(backup_image, dest_folder)
+        shutil.copy(backup_image, dest_file_path)
         continue
     
     shutil.copy(copied_image, dest_folder)
