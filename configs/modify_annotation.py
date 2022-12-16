@@ -51,7 +51,7 @@ def convert_balloon_to_coco(ann_file, out_file, image_prefix):
     mmcv.dump(coco_format_json, out_file)
 
 if __name__ == "__main__":
-    anno_file = "val/via_region_data_val.json"
-    output_file = "val/annotation_coco.json"
-    prefix = "val"
+    anno_file = "train/via_region_data_val.json"
+    output_file = "train/annotation_coco.json"
+    prefix = "train"
     convert_balloon_to_coco(anno_file, output_file, prefix)
