@@ -6,9 +6,11 @@ from mmdet.models import build_detector
 
 def main():
     # Choose to use a config and initialize the detector
-    config = 'configs/faster_rcnn/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco.py'
+    # config = 'configs/faster_rcnn/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco.py'
+    config = 'configs/mask_rcnn_r50_caffe_fpn_mstrain-poly_1x_pallet.py'
     # Setup a checkpoint file to load
-    checkpoint = 'checkpoints/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco_20210526_095054-1f77628b.pth'
+    # checkpoint = 'checkpoints/faster_rcnn_r50_caffe_fpn_mstrain_3x_coco_20210526_095054-1f77628b.pth'
+    checkpoint = 'work_dirs/mask_rcnn_r50_caffe_fpn_mstrain-poly_1x_pallet/epoch_12.pth'
 
     # Set the device to be used for evaluation
     device='cuda:0'
